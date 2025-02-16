@@ -1,37 +1,35 @@
 
 class AppConfig {
-  // 私有构造函数，防止实例化
+
   AppConfig._();
 
-  // 应用版本
+
   static const String version = '1.0.0';
 
-  // 开发者信息
+
   static const String developer = 'None';
 
-  // 应用密钥
+
   static const String appKey = 'your_app_key_here';
   static const String appSecret = 'your_app_secret_here';
 
-  // 其他配置项
   static const bool isDebug = true;  // 是否为调试模式
-  static const String apiBaseUrl = 'https://api.example.com';  // API基础URL
-  
-  // 本地存储键名
-  static const String storageKeyTodoItems = 'todoItems';  // 待办事项存储键
-  static const String storageKeySettings = 'appSettings';  // 应用设置存储键
-  
-  // 日历相关配置
-  static const Duration defaultEventDuration = Duration(hours: 1);  // 默认事项持续时间
-  static const Duration defaultReminderTime = Duration(minutes: 30);  // 默认提醒时间
+  static const String apiBaseUrl = 'https://api.example.com'; 
 
-  // AI 模型配置
+  static const String storageKeyTodoItems = 'todoItems'; 
+  static const String storageKeySettings = 'appSettings';  
+  
+
+  static const Duration defaultEventDuration = Duration(hours: 1);
+  static const Duration defaultReminderTime = Duration(minutes: 30);  
+
+
   static const Map<String, AIModelConfig> aiModels = {
     'deepseek-v3': AIModelConfig(
-      name: 'Deepseek V3',
-      apiUrl: 'https://dashscope.aliyuncs.com/compatible-mode/v1/chat/completions',
-      apiKey: 'sk-002bf1dceae14db396bfb06fdd151758',
-      model: 'deepseek-v3',
+      name: 'Your-model-name',
+      apiUrl: 'Your-API-base-url',
+      apiKey: 'Your-API-Key',
+      model: 'Your-model',
       temperature: 0.7,
       maxTokens: 4000,
       systemPrompt: '''你是一个待办事项助手。请分析用户输入的文本,提取所有待办事项并生成结构化信息。
@@ -73,21 +71,19 @@ class AppConfig {
     ),
   };
 
-  // 当前使用的 AI 模型
-  static const String currentAIModel = 'deepseek-v3';
+
+  static const String currentAIModel = 'change-to-your-model';
 }
 
-/**
- * AI 模型配置
- */
+
 class AIModelConfig {
-  final String name;       // 模型显示名称
-  final String apiUrl;     // API 地址
-  final String apiKey;     // API 密钥
-  final String model;      // 模型标识符
-  final double temperature;// 温度参数
-  final int maxTokens;     // 最大 token 数
-  final String? systemPrompt; // 系统提示词，可选
+  final String name;       
+  final String apiUrl;    
+  final String apiKey;    
+  final String model;     
+  final double temperature;
+  final int maxTokens;     
+  final String? systemPrompt; 
 
   const AIModelConfig({
     required this.name,

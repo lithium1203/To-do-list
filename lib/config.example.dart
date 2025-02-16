@@ -1,7 +1,4 @@
-/**
- * 应用配置示例
- * 使用时请复制此文件为 config.dart 并填入实际的值
- */
+
 class AppConfig {
   AppConfig._();
 

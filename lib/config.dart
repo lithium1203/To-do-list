@@ -1,4 +1,3 @@
-
 class AppConfig {
 
   AppConfig._();
@@ -13,7 +12,7 @@ class AppConfig {
   static const String appKey = 'your_app_key_here';
   static const String appSecret = 'your_app_secret_here';
 
-  static const bool isDebug = true;  // 是否为调试模式
+  static const bool isDebug = false;  // 是否为调试模式
   static const String apiBaseUrl = 'https://api.example.com'; 
 
   static const String storageKeyTodoItems = 'todoItems'; 
